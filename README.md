@@ -1,7 +1,7 @@
 <!-- Add banner here -->
-![Banner](https://github.com/brandon-sharpe/Zillow-Clustering-Project/blob/main/Zillow.gif)
+![Banner](https://github.com/brandon-sharpe/MTG-project/blob/main/MTG_placeholder.gif)
 
-# Zillow Clustering Project
+# MTG Clustering Project
 
 <!-- Add buttons here -->
 
