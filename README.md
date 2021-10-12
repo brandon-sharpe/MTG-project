@@ -25,7 +25,7 @@ The goal of this project is train a model to accurately predict and classify the
 <!-- Add a table of contents for your project -->
 
 - [Project Title](#project-title)
-- [What is Magic the Gathering?(#what-is-magic-the-gathering?)
+- [What is Magic the Gathering?](#what-is-magic-the-gathering?)
 - [Executive Summary](#executive-summary)
 - [Table of contents](#table-of-contents)
 - [Data Dictionary](#data-dictionary)
@@ -55,14 +55,18 @@ The goal of this project is train a model to accurately predict and classify the
 | supertypes | 10146 non-null: object  |Classification of whether or not the creature has a supertype (Snow, Legendary, None)|
 | text       | 10146 non-null: object  |Text on card, also includes keywords and explanes abilities not classified under key words|
 | toughness  | 10146 non-null: object  |The defense power of a card (normally a number but can be represented by a * )             |
+
 # Data Science Pipeline
 [(Back to top)](#table-of-contents)
 <!-- Describe your Data Science Pipeline process -->
-Following best practices I documented my progress throughout the project and will provide quick summaries and thoughts here. For a further deep dive please visit my final notebook or take a look at the planning that took place for this project using trello ()
+Following best practices I documented my progress throughout the project and will provide quick summaries and thoughts here. For a further deep dive please visit my final notebook or take a look at the planning that took place for this project using trello (https://trello.com/b/KxhOn2jO)
 
 ### Acquire
 [(Back to top)](#table-of-contents)
 <!-- Describe your acquire process -->
+This data was acquired from MTGJSON. MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process they fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website(https://mtgjson.com).
+
+In particular i chose to acquire my data from the Allprintings.csv file found here(https://mtgjson.com/downloads/all-files/#allprintingscsvfiles). This file contains information on every card printed by Wizards of the Cost, including alot of information I wont be using in this project but may attempt to use in a future project.
 
 ### Prepare
 [(Back to top)](#table-of-contents)
