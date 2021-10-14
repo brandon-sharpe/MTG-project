@@ -1,7 +1,9 @@
 import pandas as pd
 import numpy as np
 import re
+import nltk
 from sklearn.model_selection import train_test_split
+
 
 def vampyric_tutor():
     '''This function will read in the locally stored csv file containing every MTG card'''
@@ -25,6 +27,12 @@ def remove_name(df):
 def remove_code_text(x):
     '''This function will remove all of the left over code from when it was in json format'''
     return re.sub('\([^)]*\)' , "", x)
+
+def stem_words(x):
+    '''This function will stemm the words of a dataframe'''
+    stems = [ps.stem(word) for word in (x).split()]
+    df_stemmed = ' '.join(stems)
+    return df_stemmed
 
 def bannana_split(df):
     '''This function will split our data into a train, validate and test df stratifying color'''
@@ -152,6 +160,17 @@ def cyclonic_rift(df):
     df['text'].replace("\'" , "", inplace=True, regex=True)
     df.text = df.text.apply(remove_code_text)
     df = df[df.colors != "C"]
+    df = df[((df.toughness != '*') & (df.toughness != '1+*') & 
+               (df.toughness != '*+1') & 
+               (df.toughness != '2+*') & (df.toughness != '?')
+            )]
+    df.toughness = df.toughness.astype(float)
+    df = df[((df.power != '*') & (df.power != '1+*') & 
+               (df.power != '*+1') & 
+               (df.power != '2+*') & (df.power != '?'))]
+    df.power = df.power.astype(float)
+    df.manaValue = df.manaValue.astype(float)
+    df.dropna(inplace=True)
     return df
 
 

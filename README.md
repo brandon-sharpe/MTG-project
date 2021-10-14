@@ -19,11 +19,11 @@ The goal of this project is train a model to accurately predict and classify the
 <!-- Add a demo for your project -->
 - There are distinct words in the text that correlate to color
 
-- My SVC model provides 66.7% accuracy on unseen data.
+- My SVC model provides 79.74% accuracy on unseen data.
 
 - SVC beats baseline which was was 21.48%
 
-- These models where run soley using the text column to provide an mvp, I am confident that adding power, toughness, converted mana cost, and creature type will provide a higher rate of accuracy for future iterations.
+- These models where run soley using the text column to provide an mvp, I am confident that adding power, toughness, converted mana cost will provide a higher rate of accuracy for future iterations.
 
 # Table of contents
 <!-- Add a table of contents for your project -->
@@ -180,13 +180,13 @@ Ran over 100 different models including:
 ### Evaluate
 [(Back to top)](#table-of-contents)
 <!-- Describe your evaluation process -->
-Best performing model was a Support Vector Classifier which had 66.7% accuracy on unseen data
+Best performing model was a Support Vector Classifier which had 79.74% accuracy on unseen data
 
 
 # Conclusion
 [(Back to top)](#table-of-contents)
 <!-- Wrap up with conclusions and takeaways -->
-- SVM was our best performing model beating our baseline by 45.22% on unseen data
+- SVM was our best performing model beating our baseline by 58.26% on unseen data
 - These models were run using ONLY the text on the card to get to an mvp, Im confident future iterations will bring more accuracy with the inclusion of power, toughness, and converted mana cost, and creature type
 
 # Given More Time
