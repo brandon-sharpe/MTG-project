@@ -199,12 +199,16 @@ Best performing model was a Support Vector Classifier which had 66.7% accuracy o
 [(Back to top)](#table-of-contents)
 <!-- How can they do what you do?-->
 Run these commands in a python enviorment:
+
 import nltk
+
 nltk.download('punkt')
 
 Download into the same folder:
 https://mtgjson.com/downloads/all-files/#allprintingscsvfiles
+
 my wrangle.py
+
 my notebook
 
 # Footer
