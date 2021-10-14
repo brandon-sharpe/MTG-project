@@ -16,7 +16,13 @@ Magic: The Gathering (colloquially known as Magic or MTG) is a tabletop and digi
 The goal of this project is train a model to accurately predict and classify the color identity of a creature card based off of some of the attributes the card has. For the first itteration I will be focusing only on one color, but for future itterations I hope to somewhat accuratley preddict all color combinations. 
 # Executive Summary
 <!-- Add a demo for your project -->
+- There are distinct words in the text that correlate to color
 
+- My SVC model provides 66.7% accuracy on unseen data.
+
+- SVC beats baseline which was was 21.48%
+
+- These models where run soley using the text column to provide an mvp, I am confident that adding power, toughness, converted mana cost, and creature type will provide a higher rate of accuracy for future iterations.
 
 
 
@@ -71,8 +77,70 @@ In particular i chose to acquire my data from the Allprintings.csv file found he
 ### Prepare
 [(Back to top)](#table-of-contents)
 <!-- Describe your prepare process -->
-
-
+Dropped the following columns from the original dataframe
+  - 'index',
+  - 'id',
+  - 'artist',
+  - 'asciiName',
+  - 'borderColor',
+  - 'cardKingdomEtchedId',
+  - 'cardKingdomFoilId',
+  - 'cardKingdomId',
+  - 'colorIndicator',
+  - 'duelDeck',
+  - 'edhrecRank',
+  - 'faceConvertedManaCost',
+  - 'faceManaValue', 
+  - 'faceName',
+  - 'finishes',
+  - 'flavorName',
+  - 'flavorText',
+  - 'frameEffects',
+  - 'frameVersion',
+  - 'hand',
+  - 'hasAlternativeDeckLimit',
+  - 'hasContentWarning',
+  - 'hasFoil',
+  - 'hasNonFoil',
+  - 'isAlternative',
+  - 'isFullArt',
+  - 'isOversized',
+  - 'isPromo',
+  - 'isReserved',
+  - 'isStarter',
+  - 'isStorySpotlight',
+  - 'isTextless',
+  - 'isTimeshifted',
+  - 'leadershipSkills',
+  - 'life',
+  - 'loyalty',
+  - 'mcmId',
+  - 'mcmMetaId',
+  - 'mtgArenaId',
+  - 'mtgjsonV4Id',
+  - 'mtgoFoilId',
+  - 'mtgoId',
+  - 'multiverseId',
+  - 'originalReleaseDate',
+  - 'otherFaceIds', 
+  - 'promoTypes',
+  - 'purchaseUrls',
+  - 'scryfallId', 
+  - 'scryfallIllustrationId',
+  - 'scryfallOracleId',
+  - 'side',
+  - 'tcgplayerEtchedProductId',
+  - 'tcgplayerProductId',
+  - 'uuid',
+  - 'variations',
+  - 'watermark',
+  - 'layout',
+  - 'number',
+  - 'printings',
+  - 'originalText',
+  - 'originalType',
+  - 'convertedManaCost',
+  - 'manaCost'
 
 ### Explore
 [(Back to top)](#table-of-contents)
@@ -104,7 +172,8 @@ In particular i chose to acquire my data from the Allprintings.csv file found he
 [(Back to top)](#table-of-contents)
 <!-- How can they do what you do?-->
 
-
+  >>> import nltk
+  >>> nltk.download('punkt')
 # Footer
 [(Back to top)](#table-of-contents)
 <!-- LET THEM KNOW WHO YOU ARE (linkedin links) close with a joke. -->
