@@ -49,7 +49,7 @@ The goal of this project is train a model to accurately predict and classify the
 <!-- Drop that sweet sweet dictionary here-->
 | Feature    | Datatype                | Definition   |
 |:-----------|:------------------------|:-------------|
-| colors     | 10146 non-null: object  |The color identity of the card (Target) 5 colors (Red,Blue,Green,White,Black)|
+| colors     | 10146 non-null: object  |The color identity of the card (Target) 5 colors (Red=R,Blue=U,Green=G,White =W,Black=B)|
 | keywords   | 10146 non-null: object  |Keywords used to identify common 'abilities' in the game|
 | manaValue  | 10146 non-null: float64 |The resource cost used to play the card, a number|
 | name       | 10146 non-null: object  |Name of the card|
